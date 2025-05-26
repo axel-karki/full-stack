@@ -138,7 +138,6 @@ iface vmbr1 inet static
 ## Core Application & CI/CD Infrastructure (Ansible)
 
  * [Docker Swarm](https://github.com/axel-karki/docker-swarm-ansible)
-
  * [Gitlab Self Host](https://github.com/axel-karki/gitlab-self-host)
  * [Gitlab Runner](https://github.com/axel-karki/gitlab-runner)
 
@@ -152,3 +151,7 @@ iface vmbr1 inet static
  * [Streaming System: Apache Kafka](https://github.com/axel-karki/kafka-ansible)
  * [Messaging System: NATS](https://github.com/axel-karki/nats-server-ansible)
  * [Beszel Installation & Setup](https://github.com/axel-karki/beszel-ansible)
+
+## Needs Further Evaluation
+ * [Relational Database: PostgreSQL](https://github.com/axel-karki/ansible-postgres)
+
