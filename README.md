@@ -134,6 +134,44 @@ iface vmbr1 inet static
     post-down iptables -t nat -D POSTROUTING -s 10.0.0.0/24 -o enp6s0 -j MASQUERADE
 ```
 
+### Configuring Static IP and SSH access on VM
+
+1. Use proxmox console to access the VM and configure the IP
+```
+nano /etc/network/interfaces
+```
+```
+root@debian:~# cat /etc/network/interfaces
+# This file describes the network interfaces available on your system
+# and how to activate them. For more information, see interfaces(5).
+
+source /etc/network/interfaces.d/*
+
+# The loopback network interface
+auto lo
+iface lo inet loopback
+
+# The primary network interface
+allow-hotplug ens18
+iface ens18 inet static
+	address 10.0.0.29/24 # CONFIGURE WITH AVAILABLE IP
+	gateway 10.0.0.1
+	# dns-* options are implemented by the resolvconf package, if installed
+	dns-nameservers 10.0.0.1 1.1.1.1
+	dns-search debian.local
+```
+
+2. Configure SSH
+* Outside VM
+```
+ssh-keygen -t ed25519 -C "Comments"
+```
+
+* Inside VM
+```
+echo "Public key value" > ~/.ssh/authorized_keys
+```
+
 ---
 ## Core Application & CI/CD Infrastructure (Ansible)
 
