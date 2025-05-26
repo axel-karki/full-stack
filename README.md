@@ -219,10 +219,7 @@ Run the following playbook from this repo on new VMs:
  * [MinIO Backup](https://github.com/axel-karki/minio-ansible)
  * [Graph Database: Neo4j with DozerDB](https://github.com/axel-karki/neo4j-dozer-ansible)
  * [NoSQL Database: MongoDB](https://github.com/axel-karki/ansible-mongo)
+ * [Relational Database: PostgreSQL](https://github.com/axel-karki/ansible-postgres)
  * [Streaming System: Apache Kafka](https://github.com/axel-karki/kafka-ansible)
  * [Messaging System: NATS](https://github.com/axel-karki/nats-server-ansible)
  * [Beszel Installation & Setup](https://github.com/axel-karki/beszel-ansible)
-
-## Needs Further Evaluation
- * [Relational Database: PostgreSQL](https://github.com/axel-karki/ansible-postgres)
-
