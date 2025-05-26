@@ -141,6 +141,15 @@ iface vmbr1 inet static
  * [Gitlab Self Host](https://github.com/axel-karki/gitlab-self-host)
  * [Gitlab Runner](https://github.com/axel-karki/gitlab-runner)
 
+## Core Infrastructure Setup (Common to all new DB service nodes)
+ * Ensures the node is running Debian OS.
+ * Updates all existing system packages to their latest versions.
+ * Install git, curl, wget, and any other necessary foundational packages.
+
+Run the following playbook from this repo on new VMs:
+   ```
+   ansible-playbook -i inventory.ini initializer.yml
+   ```
 
 ## Database & Messaging Services Deployment (Ansible)
 
