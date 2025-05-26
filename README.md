@@ -172,6 +172,30 @@ ssh-keygen -t ed25519 -C "Comments"
 echo "Public key value" > ~/.ssh/authorized_keys
 ```
 
+3. SSH access
+```
+ssh -i <private/key/path> root@<VM_IP>
+```
+
+### UFW
+UFW stands for Uncomplicated Firewall and is a user-friendly interface for managing the iptables firewall in Linux systems.
+
+```
+sudo apt install ufw
+sudo ufw status
+sudo ufw enable
+```
+
+Securing a Web Server
+```
+sudo ufw default deny incoming
+sudo ufw default allow outgoing
+sudo ufw allow 22/tcp
+sudo ufw allow 80/tcp
+sudo ufw allow 443/tcp
+sudo ufw enable
+```
+
 ---
 ## Core Application & CI/CD Infrastructure (Ansible)
 
