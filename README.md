@@ -133,3 +133,22 @@ iface vmbr1 inet static
 		# Prevents stale iptables rules if interface restarts.
     post-down iptables -t nat -D POSTROUTING -s 10.0.0.0/24 -o enp6s0 -j MASQUERADE
 ```
+
+---
+## Core Application & CI/CD Infrastructure (Ansible)
+
+ * [Docker Swarm](https://github.com/axel-karki/docker-swarm-ansible)
+
+ * [Gitlab Self Host](https://github.com/axel-karki/gitlab-self-host)
+ * [Gitlab Runner](https://github.com/axel-karki/gitlab-runner)
+
+
+## Database & Messaging Services Deployment (Ansible)
+
+ * [Data Warehouse: ClickHouse](https://github.com/axel-karki/clickhouse-ansible)
+ * [MinIO Backup](https://github.com/axel-karki/minio-ansible)
+ * [Graph Database: Neo4j with DozerDB](https://github.com/axel-karki/neo4j-dozer-ansible)
+ * [NoSQL Database: MongoDB](https://github.com/axel-karki/ansible-mongo)
+ * [Streaming System: Apache Kafka](https://github.com/axel-karki/kafka-ansible)
+ * [Messaging System: NATS](https://github.com/axel-karki/nats-server-ansible)
+ * [Beszel Installation & Setup](https://github.com/axel-karki/beszel-ansible)
