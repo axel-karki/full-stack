@@ -1,0 +1,30 @@
+---
+- name: Prepare Debian nodes for DB services
+  hosts: db_hosts
+  become: yes
+  gather_facts: yes
+
+  pre_tasks:
+    - name: Ensure the operating system is Debian
+      assert:
+        that: ansible_distribution == "Debian"
+        fail_msg: "This playbook only supports Debian nodes."
+        success_msg: "Debian OS verified."
+
+  tasks:
+    - name: Update APT package cache and upgrade all packages
+      apt:
+        update_cache: yes
+        upgrade: dist
+
+    - name: Install essential foundational packages
+      apt:
+        name:
+          - git
+          - curl
+          - wget
+          - ca-certificates
+          - sudo
+          - gnupg
+        state: present
+
