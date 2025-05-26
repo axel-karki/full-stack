@@ -1,7 +1,3 @@
-Here is your **main documentation** in `README.md` format, summarizing the full infrastructure setup process:
-
----
-
 ## Infrastructure Setup on Hetzner Root Server
 
 This repository documents the setup and configuration of a virtualized infrastructure using **Proxmox VE** on a Hetzner root server, including the network configuration and service deployment using Ansible.
